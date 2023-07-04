@@ -1,0 +1,24 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+
+ - Regula - a tool evaluating IAC files for potential security and compliance vulnerabilities.
+
+### Example vulnerability
+- Problems with S3 public access/wrong policy configuration 
+
+##Scan AMI’s or containers for OS vulnerabilities
+- Syft - Go Library for generating a SBOM from container images. 
+- Grype - a vulnerability scanner for container images.
+
+### Example vulnerability
+- Example: CVE-2020-11724
+- Generally speaking, any CVE or OWASP vulnerability, such as unpatched libraries or dependencies in an image.
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+- AWS Config 
+- AWS Inspector
+
+### Example vulnerability
+- IAM root account log in weaknesses (i.e. no MFA)
+- S3 buckets without encryption

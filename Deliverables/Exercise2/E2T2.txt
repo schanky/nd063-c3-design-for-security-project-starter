@@ -1,0 +1,22 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+
+- App EC2 instance is reachable from the internet through its Security Group and IGW (Inspector)
+- App EC2 instance is configured to allow users to log in with root credentials over SSH, without having to use a command authenticated by a public key.
+- App EC2 instance, TCP port 22 (SSH), is reachable from the internet with a process listening on the port.
+- App EC2 instance is configured to support password authentication over SSH. Key-based auth should be preferred.
+- App EC2 instance, process 'python3' is listening on TCP port 5000 and publicly reachable
+- App EC2 instance, port 22 is publicly reachable
+- App EC2 instance, port 3389 publicly reachable
+- VPC security group (default) is open 
+- No logging enabled on S3 buckets for auditing/tracking purposes.
+- EC2 EBS volumes are not encrypted
+- No ALB redirect from http -> https 
+
+Bonus - provide recommendations on how to remediate the vulnerabilities.
+- Enable root account MFA.
+- Stricter password policy.
+- EC2 - enable key-based authentication instead of password.
+- Enable logging and SSL for S3 buckets.
+- Set IAM policy to readonly.
+- Ingress traffic only from security groups, disallow ingress traffic from 0.0.0.0/0 to ports 22 & 3389
+- Enable default encryption on EBS volumes

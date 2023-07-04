@@ -1,0 +1,12 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+Web App Servers are in a public subnet and the security group they are assigned to is overly permissive.
+This increases the risk of attack.
+
+# Poor practice 2
+The S3 Buckets are deployed without server-side encryption, while also being publicly accessible.
+
+# Further Remarks
+- S3 policy is too permissive, allowing web servers to access any bucket.
+- Web security group too open, allowing all traffic from any port for different methods of connection.

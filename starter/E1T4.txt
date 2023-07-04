@@ -2,4 +2,6 @@ Based on the architecture diagram, and the steps you have taken so far to upload
 
 # Poor practice 1
 
+
+
 # Poor practice 2
